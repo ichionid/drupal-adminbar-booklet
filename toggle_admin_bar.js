@@ -37,5 +37,5 @@ javascript:(function () {
 		Mousetrap.bind('d d', function () {
 			f_toggle();
 		});
-	})
+	});
  }());
