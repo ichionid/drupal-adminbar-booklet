@@ -19,19 +19,23 @@ javascript:(function () {
 
 	var $_bar = $('#toolbar-administration');
 
-	var f_toggle = function () {
-		if ($_bar.hasClass('drupal-adminbar-toggle-on')) {
-			$_bar.hide();
-			$_bar.removeClass('drupal-adminbar-toggle-on')
-		}
-		else {
-			$_bar.show();
-			$_bar.addClass('drupal-adminbar-toggle-on')
-		}
-	};
+	$(document).ready(function () {
 
-	Mousetrap.bind('d d', function () {
-		f_toggle();
-	});
+		var f_toggle = function () {
+			if ($_bar.hasClass('drupal-adminbar-toggle-on')) {
+				$_bar.hide();
+				$_bar.removeClass('drupal-adminbar-toggle-on')
+			}
+			else {
+				$_bar.show();
+				$_bar.addClass('drupal-adminbar-toggle-on')
+			}
+		};
 
+		f_toggle()
+
+		Mousetrap.bind('d d', function () {
+			f_toggle();
+		});
+	})
  }());
