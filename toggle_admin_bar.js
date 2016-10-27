@@ -32,7 +32,7 @@ javascript:(function () {
 			}
 		};
 
-		f_toggle()
+		f_toggle();
 
 		Mousetrap.bind('d d', function () {
 			f_toggle();
